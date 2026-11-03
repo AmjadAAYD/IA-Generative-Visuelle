@@ -1,0 +1,19 @@
+{
+  "class_counts": [
+    102,
+    71,
+    107,
+    102,
+    79,
+    91,
+    85,
+    121,
+    113,
+    129
+  ],
+  "lenet_test_accuracy": 0.9793,
+  "svm_real_real": 0.905,
+  "svm_real_synthetic": 0.642,
+  "svm_synthetic_real": 0.7761,
+  "replacement_weights": true
+}

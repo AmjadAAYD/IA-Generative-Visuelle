@@ -1,0 +1,26 @@
+{
+  "dataset": "sklearn.load_digits",
+  "total_disponible": 1797,
+  "N_apprentissage": 1500,
+  "forme_image": [
+    8,
+    8
+  ],
+  "dimension": 64,
+  "rang_covariance": 61,
+  "variance_conservee": {
+    "10": 0.7391964211184944,
+    "25": 0.9336129298285339,
+    "50": 0.9995109965081872
+  },
+  "pixels_hors_intervalle": {
+    "10": 0.19661458333333334,
+    "25": 0.21875,
+    "50": 0.2526041666666667
+  },
+  "mc_r25": {
+    "N": 20000,
+    "erreur_moyenne_L2": 0.015285979227941138,
+    "erreur_covariance_relative": 0.020915680146033157
+  }
+}

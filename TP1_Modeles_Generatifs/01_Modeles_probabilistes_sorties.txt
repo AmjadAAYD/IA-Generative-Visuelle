@@ -1,0 +1,71 @@
+CELLULE 1
+Python 3.12.10 | NumPy 2.3.5 | PyTorch 2.12.0.dev20260408+cu128 | scikit-learn 1.8.0
+Calcul CPU, float64, deux threads ; graine = 42
+
+
+CELLULE 3
+Bernoulli : vrai = 0.7 MLE = 0.696 direct = 0.6959999999999998 sigmoïde = 0.696
+
+
+CELLULE 5
+Gaussienne 1D : vrai (2.0, 1.5) MLE (1.9596928721511304, 1.519229528043927) gradient [1.95969 1.51923]
+
+
+CELLULE 7
+Moyenne vraie / estimée / MLE :
+[ 1.  -2.   0.5]
+[ 1.03371 -1.96027  0.5202 ]
+[ 1.03371 -1.96027  0.5202 ]
+Covariance vraie :
+ [[1.  0.5 0.2]
+ [0.5 2.  0.4]
+ [0.2 0.4 1.5]] 
+Covariance estimée :
+ [[0.98148 0.45822 0.1533 ]
+ [0.45822 1.95289 0.31974]
+ [0.1533  0.31974 1.49353]]
+
+
+CELLULE 9
+Permutation estimée alignée sur les vraies composantes : (2, 1, 0)
+Log-vraisemblances finales des trois essais : [np.float64(-30012.693), np.float64(-30012.693), np.float64(-30012.693)]
+Poids vrais / estimés :
+[0.25 0.45 0.3 ]
+[0.25199 0.44701 0.301  ]
+Moyennes vraies / estimées :
+[[-4.  0.  2.]
+ [ 0.  4. -2.]
+ [ 4. -3.  0.]]
+[[-3.99026 -0.04757  2.00911]
+ [-0.05862  3.98695 -2.02338]
+ [ 4.01109 -3.01619  0.02972]]
+Covariances vraies / estimées :
+[[[ 0.7   0.15  0.  ]
+  [ 0.15  0.9   0.1 ]
+  [ 0.    0.1   0.6 ]]
+
+ [[ 1.   -0.2   0.1 ]
+  [-0.2   0.8   0.  ]
+  [ 0.1   0.    0.9 ]]
+
+ [[ 0.8   0.1  -0.1 ]
+  [ 0.1   0.6   0.1 ]
+  [-0.1   0.1   1.  ]]]
+[[[ 0.72536  0.1411   0.00751]
+  [ 0.1411   0.88282  0.09731]
+  [ 0.00751  0.09731  0.58471]]
+
+ [[ 0.99987 -0.18741  0.0932 ]
+  [-0.18741  0.79218  0.00252]
+  [ 0.0932   0.00252  0.92386]]
+
+ [[ 0.81318  0.09892 -0.10716]
+  [ 0.09892  0.61286  0.09697]
+  [-0.10716  0.09697  1.01315]]]
+
+
+CELLULE 11
+GMM 2D : convergence True itérations 9
+Poids des six composantes : [0.13701 0.17432 0.1406  0.15172 0.23956 0.1568 ]
+Points globaux avec x1 hors [0,10] : 3
+Partie 1 : tous les contrôles ont réussi.

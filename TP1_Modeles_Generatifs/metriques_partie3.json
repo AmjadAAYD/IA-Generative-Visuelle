@@ -1,0 +1,183 @@
+{
+  "texte": {
+    "tokens": 166,
+    "vocabulaire": 70,
+    "bigrammes_distincts": 131,
+    "top10": [
+      [
+        [
+          ".",
+          "Une"
+        ],
+        19
+      ],
+      [
+        [
+          "Une",
+          "image"
+        ],
+        4
+      ],
+      [
+        [
+          "contient",
+          "des"
+        ],
+        4
+      ],
+      [
+        [
+          "des",
+          "pixels"
+        ],
+        3
+      ],
+      [
+        [
+          "pixels",
+          "."
+        ],
+        3
+      ],
+      [
+        [
+          "chiffre",
+          "."
+        ],
+        2
+      ],
+      [
+        [
+          "une",
+          "variation"
+        ],
+        2
+      ],
+      [
+        [
+          "loi",
+          "gaussienne"
+        ],
+        2
+      ],
+      [
+        [
+          "et",
+          "une"
+        ],
+        2
+      ],
+      [
+        [
+          "Une",
+          "direction"
+        ],
+        2
+      ]
+    ],
+    "phrase": "Une distribution.",
+    "terminee": true,
+    "autres_phrases": [
+      [
+        "Une transition dépend du dernier mot.",
+        true
+      ],
+      [
+        "Une chaîne de cohérence.",
+        true
+      ],
+      [
+        "Une direction principale décrit une fin de nouvelles observations.",
+        true
+      ],
+      [
+        "Une image moyenne et une probabilité positive.",
+        true
+      ],
+      [
+        "Une phrase.",
+        true
+      ]
+    ],
+    "phrases_ordre2": [
+      [
+        "Une image représente un chiffre.",
+        true
+      ],
+      [
+        "Une fin de phrase correspond à un point.",
+        true
+      ],
+      [
+        "Une transition observée reçoit une probabilité positive.",
+        true
+      ],
+      [
+        "Une direction principale décrit une variation autour de la moyenne.",
+        true
+      ],
+      [
+        "Une covariance décrit les variations des pixels.",
+        true
+      ]
+    ]
+  },
+  "nll": {
+    "ordre1_alpha0": {
+      "par_sequence": 1.9944920232821373,
+      "par_token": 0.4986230058205343
+    },
+    "ordre1_alpha1": {
+      "par_sequence": 4.015042047133781,
+      "par_token": 1.0037605117834452
+    },
+    "ordre2_alpha0": {
+      "par_sequence": 1.7328679513998635,
+      "par_token": 0.4332169878499659
+    },
+    "ordre2_alpha1": {
+      "par_sequence": 4.321576343332203,
+      "par_token": 1.0803940858330507
+    }
+  },
+  "structures": {
+    "ordre1": {
+      "contextes_possibles": 5,
+      "contextes_observes": 5,
+      "parametres_libres_table_complete": 20,
+      "transitions_observees": 9
+    },
+    "ordre2": {
+      "contextes_possibles": 21,
+      "contextes_observes": 8,
+      "parametres_libres_table_complete": 84,
+      "transitions_observees": 12
+    }
+  },
+  "qualite_lots20": {
+    "ordre1_alpha0": {
+      "uniques": 8,
+      "terminees": 20,
+      "presentes_dans_corpus": 11,
+      "longueur_moyenne": 3.85
+    },
+    "ordre1_alpha1": {
+      "uniques": 18,
+      "terminees": 20,
+      "presentes_dans_corpus": 1,
+      "longueur_moyenne": 4.45
+    },
+    "ordre2_alpha0": {
+      "uniques": 6,
+      "terminees": 20,
+      "presentes_dans_corpus": 16,
+      "longueur_moyenne": 4.1
+    },
+    "ordre2_alpha1": {
+      "uniques": 19,
+      "terminees": 20,
+      "presentes_dans_corpus": 1,
+      "longueur_moyenne": 5.95
+    }
+  }
+}

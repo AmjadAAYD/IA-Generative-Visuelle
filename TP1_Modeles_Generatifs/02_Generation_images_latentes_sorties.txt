@@ -1,0 +1,20 @@
+CELLULE 1
+Python 3.12.10 | NumPy 2.3.5 | PyTorch 2.12.0.dev20260408+cu128 | scikit-learn 1.8.0
+Calcul CPU, float64, deux threads ; graine = 43
+
+
+CELLULE 3
+Données : 1500 images, dimension 64 ; rang numérique 61
+Variance conservée : {10: 0.739196, 25: 0.933613, 50: 0.999511}
+
+
+CELLULE 5
+
+
+CELLULE 7
+Pixels bruts hors [0,1] pour ces douze échantillons : {10: 0.19661458333333334, 25: 0.21875, 50: 0.2526041666666667}
+Vérification Monte-Carlo r=25 : erreur moyenne L2 0.015285979227941138 ; erreur covariance relative 0.020915680146033157
+
+
+CELLULE 9
+Partie 2 : tous les contrôles ont réussi.

@@ -1,0 +1,206 @@
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 1
+# Importer uniquement les bibliothèques utilisées dans ce notebook.
+from pathlib import Path
+import json
+import time
+import random
+import numpy as np
+import torch
+from torch import nn
+from torch.nn import functional as F
+from torch.utils.data import DataLoader, TensorDataset
+from torchvision.datasets import CIFAR10
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
+from IPython.display import display, Image
+
+# Fixer les tirages pour pouvoir refaire une expérience comparable.
+random.seed(42)
+np.random.seed(42)
+torch.manual_seed(42)
+torch.set_num_threads(6)
+
+# Utiliser le GPU si ce PC en possède un ; sinon utiliser le processeur.
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print("Calcul sur :", device)
+if device.type == "cuda":
+    print(torch.cuda.get_device_name(0))
+
+# Tous les fichiers créés restent dans le dossier de ce TP.
+racine = Path.cwd()
+(racine / "figures").mkdir(exist_ok=True)
+(racine / "models").mkdir(exist_ok=True)
+debut = time.time()
+Calcul sur : cuda
+NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 3
+# Télécharger les vraies images CIFAR-10 avec torchvision.
+# Au prochain lancement, les fichiers locaux sont réutilisés.
+train = CIFAR10(root="data", train=True, download=True)
+test = CIFAR10(root="data", train=False, download=True)
+
+# CIFAR stocke [image, hauteur, largeur, couleur].
+# PyTorch attend [image, couleur, hauteur, largeur].
+x_train = torch.tensor(train.data).permute(0, 3, 1, 2).float() / 255.0
+x_test = torch.tensor(test.data).permute(0, 3, 1, 2).float() / 255.0
+y_train = torch.tensor(train.targets)
+y_test = torch.tensor(test.targets)
+
+# Former des lots de 128 images pour l'apprentissage.
+donnees_train = TensorDataset(x_train, y_train)
+chargeur = DataLoader(donnees_train, batch_size=128, shuffle=True)
+classes = ["avion", "voiture", "oiseau", "chat", "cerf",
+           "chien", "grenouille", "cheval", "bateau", "camion"]
+print("Apprentissage :", x_train.shape)
+print("Test :", x_test.shape)
+print("Classes :", classes)
+assert x_train.shape == (50000, 3, 32, 32)
+assert x_test.shape == (10000, 3, 32, 32)
+Apprentissage : torch.Size([50000, 3, 32, 32])
+Test : torch.Size([10000, 3, 32, 32])
+Classes : ['avion', 'voiture', 'oiseau', 'chat', 'cerf', 'chien', 'grenouille', 'cheval', 'bateau', 'camion']
+
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 4
+# Cette fonction sert seulement à afficher et sauvegarder une grille de couleurs.
+# permute remet les couleurs en dernier, comme attendu par matplotlib.
+def afficher(images, titre, fichier, colonnes=8):
+    images = images.detach().cpu().clamp(0, 1)
+    lignes = (len(images) + colonnes - 1) // colonnes
+    figure, axes = plt.subplots(lignes, colonnes,
+                               figsize=(colonnes * 1.4, lignes * 1.5),
+                               squeeze=False)
+    for numero, axe in enumerate(axes.flat):
+        axe.axis("off")
+        if numero < len(images):
+            axe.imshow(images[numero].permute(1, 2, 0))
+    figure.suptitle(titre)
+    figure.tight_layout()
+    chemin = racine / "figures" / fichier
+    figure.savefig(chemin, dpi=140, bbox_inches="tight")
+    plt.close(figure)
+    display(Image(filename=str(chemin)))
+
+# Une seconde petite fonction affiche une courbe déjà calculée.
+def courbe(valeurs, titre, fichier):
+    plt.figure(figsize=(6, 3))
+    plt.plot(range(1, len(valeurs) + 1), valeurs, marker="o")
+    plt.xlabel("Époque")
+    plt.ylabel("Perte moyenne")
+    plt.title(titre)
+    plt.grid(alpha=0.2)
+    plt.tight_layout()
+    chemin = racine / "figures" / fichier
+    plt.savefig(chemin, dpi=140)
+    plt.close()
+    display(Image(filename=str(chemin)))
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 6
+# Définir un AE dense : chaque image est un vecteur de 3 072 nombres.
+class AEDense(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.encodeur = nn.Sequential(
+            nn.Flatten(),
+            nn.Linear(3072, 1024), nn.ReLU(),
+            nn.Linear(1024, 256), nn.ReLU(),
+            nn.Linear(256, 128)
+        )
+        self.decodeur = nn.Sequential(
+            nn.Linear(128, 256), nn.ReLU(),
+            nn.Linear(256, 1024), nn.ReLU(),
+            nn.Linear(1024, 3072), nn.Sigmoid(),
+            nn.Unflatten(1, (3, 32, 32))
+        )
+
+    # Compresser l'image, puis reconstruire les trois couleurs.
+    def forward(self, x):
+        z = self.encodeur(x)
+        reconstruction = self.decodeur(z)
+        return reconstruction
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 7
+# Cette boucle est commune aux trois AEs : seule l'amplitude du bruit change.
+# bruit=0 : AE classique. bruit=0.3 : DAE, avec une cible toujours propre.
+def entrainer_ae(modele, nom, bruit=0.0):
+    modele = modele.to(device)
+    optimiseur = torch.optim.Adam(modele.parameters(), lr=0.001)
+    pertes = []
+    for epoque in range(10):
+        modele.train()
+        somme = 0.0
+        for images, etiquettes in chargeur:
+            images = images.to(device)
+            # Ajouter éventuellement du bruit, puis limiter les valeurs à [0,1].
+            entrees = (images + bruit * torch.randn_like(images)).clamp(0, 1)
+            # Vider les anciens gradients avant le nouveau calcul.
+            optimiseur.zero_grad()
+            sorties = modele(entrees)
+            # Comparer la sortie à l'image propre, même pour le DAE.
+            erreur = F.mse_loss(sorties, images)
+            erreur.backward()
+            optimiseur.step()
+            somme += erreur.item() * len(images)
+        moyenne = somme / len(x_train)
+        pertes.append(moyenne)
+        print(nom, "époque", epoque + 1, "MSE", moyenne, flush=True)
+    modele.eval()
+    torch.save(modele.state_dict(), racine / "models" / (nom + ".pt"))
+    return modele, pertes
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 8
+# Entraîner le dense sur les 50 000 images, puis regarder sa courbe.
+dense, pertes_dense = entrainer_ae(AEDense(), "AE_dense")
+courbe(pertes_dense, "AE dense : MSE", "A_dense_perte.png")
+with torch.no_grad():
+    recon_dense = dense(x_test[:8].to(device)).cpu()
+afficher(torch.cat([x_test[:8], recon_dense]),
+         "Originaux / reconstructions denses", "A_dense_images.png")
+AE_dense époque 1 MSE 0.031562384638786314
+
+AE_dense époque 2 MSE 0.02249757889688015
+
+AE_dense époque 3 MSE 0.019596799866557123
+
+AE_dense époque 4 MSE 0.01696845822632313
+
+AE_dense époque 5 MSE 0.016047987600564955
+
+AE_dense époque 6 MSE 0.015346653424501418
+
+AE_dense époque 7 MSE 0.014675576067268848
+
+AE_dense époque 8 MSE 0.013839120526313782
+
+AE_dense époque 9 MSE 0.013254017580747604
+
+AE_dense époque 10 MSE 0.012840358445346355
+
+
+A_Autoencodeurs_CIFAR10.ipynb / cellule 10
+# Deux convolutions réduisent les dimensions : 32 → 16 → 8.
+class AEConv(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.encodeur = nn.Sequential(
+            nn.Conv2d(3, 32, kernel_size=4, stride=2, padding=1), nn.ReLU(),
+            nn.Conv2d(32, 64, kernel_size=4, stride=2, padding=1), nn.ReLU(),
+            nn.Flatten(),
+            nn.Linear(64 * 8 * 8, 128)
+        )
+        # Les convolutions transposées reconstruisent : 8 → 16 → 32.
+        self.decodeur = nn.Sequential(
+            nn.Linear(128, 64 * 8 * 8), nn.ReLU(),
+            nn.Unflatten(1, (64, 8, 8)),
+            nn.ConvTranspose2d(64, 32, 4, 2, 1), nn.ReLU(),
+            nn.ConvTranspose2d(32, 3, 4, 2, 1), nn.Sigmoid()
+        )
+
+    def forward(self, x):
+        z = self.encodeur(x)
+        reconstruction = self.decodeur(z)
+        return reconstruction

@@ -1,0 +1,7 @@
+{
+  "dataset": "CIFAR-10",
+  "download_url": "https://huggingface.co/datasets/liangnanying/cifar-10-python/resolve/main/cifar-10-python.tar.gz",
+  "official_archive_md5": "c58f30108f718f92721af3b95e74349a",
+  "size": 170498071,
+  "reference": "https://www.kornia.org/tutorials/nbs/zca_whitening.html"
+}

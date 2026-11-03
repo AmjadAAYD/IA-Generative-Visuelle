@@ -1,0 +1,63 @@
+{
+  "AE_dense": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      1,
+      28,
+      28
+    ],
+    "finite_output": true
+  },
+  "AE_conv": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      1,
+      28,
+      28
+    ],
+    "finite_output": true
+  },
+  "DAE": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      1,
+      28,
+      28
+    ],
+    "finite_output": true
+  },
+  "VAE": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      1,
+      28,
+      28
+    ],
+    "finite_output": true
+  },
+  "CVAE": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      1,
+      28,
+      28
+    ],
+    "finite_output": true
+  },
+  "PixelCNN": {
+    "strict_state_reload": "PASS",
+    "forward_shape": [
+      2,
+      256,
+      28,
+      28
+    ],
+    "finite_output": true,
+    "trained_model_causality_max_difference": 0.0
+  }
+}

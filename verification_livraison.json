@@ -1,0 +1,20 @@
+{
+  "new_deliverables": [
+    {
+      "folder": "TP3_GAN",
+      "executed_cells": 9,
+      "embedded_figures": 12,
+      "pdf_pages": 7,
+      "error_outputs": 0
+    },
+    {
+      "folder": "Mini_Projet_StyleGAN",
+      "executed_cells": 7,
+      "embedded_figures": 22,
+      "pdf_pages": 7,
+      "error_outputs": 0
+    }
+  ],
+  "secret_pattern_hits": [],
+  "limits": "Contr\u00f4le des sorties, sch\u00e9ma notebook et pages PDF ; aucune \u00e9valuation FID ou validation humaine exhaustive."
+}

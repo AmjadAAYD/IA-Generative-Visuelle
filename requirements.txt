@@ -1,0 +1,12 @@
+numpy
+matplotlib
+scikit-learn
+scipy
+torch
+torchvision
+threadpoolctl
+nbformat
+nbclient
+ipykernel
+jupyterlab
+pandas

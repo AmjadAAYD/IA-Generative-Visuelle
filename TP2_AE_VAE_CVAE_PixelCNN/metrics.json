@@ -1,0 +1,55 @@
+{
+  "AE_dense_test_MSE": 0.010390885211010368,
+  "AE_conv_test_MSE": 0.00526549266406468,
+  "debruitage": [
+    {
+      "sigma": 0,
+      "AE_conv_MSE": 0.00526549266406468,
+      "DAE_MSE": 0.008617430223737444
+    },
+    {
+      "sigma": 0.1,
+      "AE_conv_MSE": 0.00788271238365952,
+      "DAE_MSE": 0.0083142812942972
+    },
+    {
+      "sigma": 0.3,
+      "AE_conv_MSE": 0.022464164453623245,
+      "DAE_MSE": 0.009062609637513453
+    },
+    {
+      "sigma": 0.5,
+      "AE_conv_MSE": 0.04539314422607422,
+      "DAE_MSE": 0.017737309794523277
+    }
+  ],
+  "VAE_last_train": {
+    "BCE + KL": 241.26715657552083,
+    "BCE reconstruction": 223.70482517903645,
+    "KL": 17.56233157043457
+  },
+  "CVAE_last_train": {
+    "BCE + KL": 129.9115512532552,
+    "BCE reconstruction": 125.15295286865235,
+    "KL": 4.758598508961995
+  },
+  "PixelCNN_causality_max_difference": 0.0,
+  "PixelCNN_test_nats_per_pixel": 2.4486246212005613,
+  "PixelCNN_test_bits_per_pixel": 3.5326185980046665,
+  "PixelCNN_generation_seconds_8_images": 1.8599939346313477,
+  "seconds_total": 181.60801577568054,
+  "protocol": {
+    "seed": 42,
+    "AE_epochs": 10,
+    "DAE_epochs": 10,
+    "VAE_epochs": 12,
+    "CVAE_epochs": 24,
+    "CVAE_latent_dimension": 2,
+    "PixelCNN_epochs": 10,
+    "PixelCNN_train_count": 12000,
+    "AE_VAE_train_count": 60000,
+    "test_count": 10000,
+    "device": "cuda",
+    "torch": "2.12.0.dev20260408+cu128"
+  }
+}

@@ -1,0 +1,139 @@
+CELLULE 1
+Python 3.12.10 | NumPy 2.3.5 | PyTorch 2.12.0.dev20260408+cu128 | scikit-learn 1.8.0
+Calcul CPU, float64, deux threads ; graine = 44
+
+
+CELLULE 4
+Tokens : 166 Vocabulaire unique : 70 Transitions observées distinctes : 131
+10 bigrammes les plus fréquents :
+('.', 'Une') : 19
+('Une', 'image') : 4
+('contient', 'des') : 4
+('des', 'pixels') : 3
+('pixels', '.') : 3
+('chiffre', '.') : 2
+('une', 'variation') : 2
+('loi', 'gaussienne') : 2
+('et', 'une') : 2
+('Une', 'direction') : 2
+Matrice dense : 4900 cases ; dictionnaire : 131 transitions stockées.
+
+
+CELLULE 5
+Phrase commençant par Une : Une distribution.
+Arrêt sur le point : True
+Cinq générations supplémentaires :
+Une transition dépend du dernier mot. [terminée]
+Une chaîne de cohérence. [terminée]
+Une direction principale décrit une fin de nouvelles observations. [terminée]
+Une image moyenne et une probabilité positive. [terminée]
+Une phrase. [terminée]
+
+
+CELLULE 7
+Texte ordre 2 :
+Une image représente un chiffre. [terminée]
+Une fin de phrase correspond à un point. [terminée]
+Une transition observée reçoit une probabilité positive. [terminée]
+Une direction principale décrit une variation autour de la moyenne. [terminée]
+Une covariance décrit les variations des pixels. [terminée]
+
+
+CELLULE 9
+('<bos>',) comptes : {'A': 3, 'B': 1} probas MLE : [0.75 0.25 0.   0.   0.  ] Laplace : [0.4444 0.2222 0.1111 0.1111 0.1111]
+('A',) comptes : {'B': 2, 'C': 1} probas MLE : [0.     0.6667 0.3333 0.     0.    ] Laplace : [0.125 0.375 0.25  0.125 0.125]
+('B',) comptes : {'C': 2, 'D': 1} probas MLE : [0.     0.     0.6667 0.3333 0.    ] Laplace : [0.125 0.125 0.375 0.25  0.125]
+('C',) comptes : {'<eos>': 1, 'D': 2} probas MLE : [0.     0.     0.     0.6667 0.3333] Laplace : [0.125 0.125 0.125 0.375 0.25 ]
+('D',) comptes : {'<eos>': 3} probas MLE : [0. 0. 0. 0. 1.] Laplace : [0.125 0.125 0.125 0.125 0.5  ]
+Ordre 1, alpha = 0 NLL : {'par_sequence': 1.9944920232821373, 'par_token': 0.4986230058205343}
+20 séquences générées :
+1 A B C <eos> 
+2 A C D <eos> 
+3 A B D <eos> 
+4 B D <eos> 
+5 A C <eos> 
+6 A B C <eos> 
+7 A B C D <eos> 
+8 A C <eos> 
+9 A B D <eos> 
+10 A B D <eos> 
+11 A B D <eos> 
+12 B D <eos> 
+13 B D <eos> 
+14 A B D <eos> 
+15 A C D <eos> 
+16 B C D <eos> 
+17 A C D <eos> 
+18 B C <eos> 
+19 A B C D <eos> 
+20 A B C D <eos> 
+Ordre 1, alpha = 1 NLL : {'par_sequence': 4.015042047133781, 'par_token': 1.0037605117834452}
+20 séquences générées :
+1 C D <eos> 
+2 C A C D <eos> 
+3 A A D D D <eos> 
+4 A B D <eos> 
+5 <eos> 
+6 D C <eos> 
+7 B A B D <eos> 
+8 A C C B A A B A C <eos> 
+9 A C <eos> 
+10 D C D D A B A B <eos> 
+11 <eos> 
+12 D <eos> 
+13 <eos> 
+14 A C D B B D <eos> 
+15 C <eos> 
+16 A <eos> 
+17 B C <eos> 
+18 A D B C D C D <eos> 
+19 A A B A C D A D <eos> 
+20 B A B C <eos> 
+
+
+CELLULE 11
+Ordre 2, alpha = 0 NLL : {'par_sequence': 1.7328679513998635, 'par_token': 0.4332169878499659}
+1 A C D <eos> 
+2 A C D <eos> 
+3 B C <eos> 
+4 A C D <eos> 
+5 A B D <eos> 
+6 A B D <eos> 
+7 B C D <eos> 
+8 A B C <eos> 
+9 A C D <eos> 
+10 A B D <eos> 
+11 A B C D <eos> 
+12 A B D <eos> 
+13 A B C <eos> 
+14 A B C D <eos> 
+15 A C D <eos> 
+16 A B D <eos> 
+17 A C D <eos> 
+18 A B C D <eos> 
+19 B C D <eos> 
+20 B C D <eos> 
+Ordre 2, alpha = 1 NLL : {'par_sequence': 4.321576343332203, 'par_token': 1.0803940858330507}
+1 C C C A A B A A D A D B C <eos> 
+2 B C B A D <eos> 
+3 A B D A A <eos> 
+4 A B C B D A <eos> 
+5 <eos> 
+6 D B D <eos> 
+7 A C A D A A B C D D <eos> 
+8 A A D B C A A C <eos> 
+9 A B A B D <eos> 
+10 A <eos> 
+11 B C <eos> 
+12 B C D <eos> 
+13 B B C B C <eos> 
+14 A B D B B C D A A D C B B D <eos> 
+15 C D D C B B <eos> 
+16 A C B C <eos> 
+17 <eos> 
+18 A A <eos> 
+19 C <eos> 
+20 D C D B B C <eos> 
+Structures : {'ordre1': {'contextes_possibles': 5, 'contextes_observes': 5, 'parametres_libres_table_complete': 20, 'transitions_observees': 9}, 'ordre2': {'contextes_possibles': 21, 'contextes_observes': 8, 'parametres_libres_table_complete': 84, 'transitions_observees': 12}}
+Qualité descriptive des lots de 20 : {(1, 0): {'uniques': 8, 'terminees': 20, 'presentes_dans_corpus': 11, 'longueur_moyenne': 3.85}, (1, 1): {'uniques': 18, 'terminees': 20, 'presentes_dans_corpus': 1, 'longueur_moyenne': 4.45}, (2, 0): {'uniques': 6, 'terminees': 20, 'presentes_dans_corpus': 16, 'longueur_moyenne': 4.1}, (2, 1): {'uniques': 19, 'terminees': 20, 'presentes_dans_corpus': 1, 'longueur_moyenne': 5.95}}
+Partie 3 : tous les contrôles ont réussi.

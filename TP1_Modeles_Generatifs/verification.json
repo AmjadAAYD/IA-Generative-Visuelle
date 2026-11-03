@@ -1,0 +1,26 @@
+{
+  "notebooks": [
+    {
+      "notebook": "01_Modeles_probabilistes.ipynb",
+      "cellules_code_executees": 6,
+      "images_integrees": 7,
+      "erreurs": 0
+    },
+    {
+      "notebook": "02_Generation_images_latentes.ipynb",
+      "cellules_code_executees": 5,
+      "images_integrees": 5,
+      "erreurs": 0
+    },
+    {
+      "notebook": "03_Modeles_autoregressifs.ipynb",
+      "cellules_code_executees": 6,
+      "images_integrees": 3,
+      "erreurs": 0
+    }
+  ],
+  "figures_PNG": 15,
+  "sequences_generees": 80,
+  "pdf_pages": 17,
+  "verification": "Notebooks valides et exécutés sans erreurs ; assertions scientifiques passées ; figures et PDF inspectés visuellement."
+}

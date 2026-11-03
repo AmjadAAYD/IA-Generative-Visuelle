@@ -1,0 +1,12 @@
+# Contraintes portables pour une installation neuve (distinctes du snapshot exact).
+# Calcul CPU ; la version PyTorch de développement du poste est documentée
+# dans versions_environnement.json et n'est pas requise par les exercices.
+numpy>=2.0,<3
+scipy>=1.14,<2
+matplotlib>=3.9,<4
+scikit-learn>=1.5,<2
+torch>=2.6,<3
+nbformat>=5.10,<6
+nbclient>=0.10,<1
+ipykernel>=6,<8
+jupyterlab>=4,<5

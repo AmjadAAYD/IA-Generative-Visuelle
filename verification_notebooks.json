@@ -1,0 +1,79 @@
+[
+  {
+    "notebook": "Adaptation_CIFAR10_incomplete/A_Autoencodeurs_CIFAR10.ipynb",
+    "code_cells": 13,
+    "executed": 7,
+    "error_outputs": 0,
+    "sha256": "52178512a4ad957fbecc67caea8a79b32af3a8dde5aa12a919e1032cfd657c1a"
+  },
+  {
+    "notebook": "Adaptation_CIFAR10_incomplete/B_VAE_CIFAR10.ipynb",
+    "code_cells": 11,
+    "executed": 0,
+    "error_outputs": 0,
+    "sha256": "41f30782e770a93907f8823e50b4fb7eb516a8b49d2951d63506713dc96648ce"
+  },
+  {
+    "notebook": "Adaptation_CIFAR10_incomplete/C_CVAE_CIFAR10.ipynb",
+    "code_cells": 9,
+    "executed": 0,
+    "error_outputs": 0,
+    "sha256": "6f2a9e14869f2c5eeaf677c8496c8e4ce1688b41516ef6f94b300a72b80c44e8"
+  },
+  {
+    "notebook": "Adaptation_CIFAR10_incomplete/D_PixelCNN_CIFAR10.ipynb",
+    "code_cells": 11,
+    "executed": 0,
+    "error_outputs": 0,
+    "sha256": "60f41150a2187939b51b71aba26376b3a5fd67d264c8d24acb695443ed25f368"
+  },
+  {
+    "notebook": "Mini_Projet_StyleGAN/Mini_Projet_StyleGAN.ipynb",
+    "code_cells": 7,
+    "executed": 7,
+    "error_outputs": 0,
+    "sha256": "24072c28ad234b34533a0f1aac647cf9298160bdd5f86462abcc01505c962ebf"
+  },
+  {
+    "notebook": "TP1_Modeles_Generatifs/01_Modeles_probabilistes.ipynb",
+    "code_cells": 6,
+    "executed": 6,
+    "error_outputs": 0,
+    "sha256": "9033bf281145665c8dd5f7e4710cbc843ef2e9b55d1a5fbcf515806d91080fcf"
+  },
+  {
+    "notebook": "TP1_Modeles_Generatifs/02_Generation_images_latentes.ipynb",
+    "code_cells": 5,
+    "executed": 5,
+    "error_outputs": 0,
+    "sha256": "67af6b4580ec09d034d826b87f99b24a154a1d5b09355a8d56383051ea921a3f"
+  },
+  {
+    "notebook": "TP1_Modeles_Generatifs/03_Modeles_autoregressifs.ipynb",
+    "code_cells": 6,
+    "executed": 6,
+    "error_outputs": 0,
+    "sha256": "941749b76dab9c8b30ec5b099b04a38bb858548b4f12809ccddb0667ab1a1300"
+  },
+  {
+    "notebook": "TP2_AE_VAE_CVAE_PixelCNN/TP2_AE_VAE_CVAE_PixelCNN.ipynb",
+    "code_cells": 8,
+    "executed": 8,
+    "error_outputs": 0,
+    "sha256": "4ad55897b64f31dfcb257a23b82e84a84b255790caa548830ad6d5c7f3482c29"
+  },
+  {
+    "notebook": "TP3_GAN/TP3_GAN.ipynb",
+    "code_cells": 9,
+    "executed": 9,
+    "error_outputs": 0,
+    "sha256": "8e6295bfb0e62d7e5e94225a11306ad747a2e3dc11b5b67dbfae616c370ab3bd"
+  },
+  {
+    "notebook": "Mini_Projet_StyleGAN/premier_essai_effondrement/Mini_Projet_StyleGAN.ipynb",
+    "code_cells": 7,
+    "executed": 7,
+    "error_outputs": 0,
+    "sha256": "89aa98df983f639781dec03142457707790d994a55d200b32baaf5f8b73ab1ba"
+  }
+]

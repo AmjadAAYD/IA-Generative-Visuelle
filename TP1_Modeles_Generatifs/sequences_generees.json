@@ -1,0 +1,777 @@
+{
+  "ordre1_alpha0": [
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    }
+  ],
+  "ordre1_alpha1": [
+    {
+      "tokens": [
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "C",
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "A",
+        "D",
+        "D",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "D",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "C",
+        "B",
+        "A",
+        "A",
+        "B",
+        "A",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "D",
+        "C",
+        "D",
+        "D",
+        "A",
+        "B",
+        "A",
+        "B",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "B",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "D",
+        "B",
+        "C",
+        "D",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "A",
+        "B",
+        "A",
+        "C",
+        "D",
+        "A",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "A",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    }
+  ],
+  "ordre2_alpha0": [
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    }
+  ],
+  "ordre2_alpha1": [
+    {
+      "tokens": [
+        "C",
+        "C",
+        "C",
+        "A",
+        "A",
+        "B",
+        "A",
+        "A",
+        "D",
+        "A",
+        "D",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "B",
+        "A",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "A",
+        "A",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "C",
+        "B",
+        "D",
+        "A",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "D",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "A",
+        "D",
+        "A",
+        "A",
+        "B",
+        "C",
+        "D",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "A",
+        "D",
+        "B",
+        "C",
+        "A",
+        "A",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "A",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "C",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "B",
+        "B",
+        "C",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "B",
+        "D",
+        "B",
+        "B",
+        "C",
+        "D",
+        "A",
+        "A",
+        "D",
+        "C",
+        "B",
+        "B",
+        "D",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "C",
+        "D",
+        "D",
+        "C",
+        "B",
+        "B",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "C",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "A",
+        "A",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    },
+    {
+      "tokens": [
+        "D",
+        "C",
+        "D",
+        "B",
+        "B",
+        "C",
+        "<eos>"
+      ],
+      "terminee": true
+    }
+  ]
+}

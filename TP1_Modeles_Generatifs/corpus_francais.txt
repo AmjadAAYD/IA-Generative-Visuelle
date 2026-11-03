@@ -1,0 +1,20 @@
+Une image représente un chiffre.
+Une image contient des pixels.
+Une image moyenne contient des traits superposés.
+Une image générée représente une variation autour de la moyenne.
+Une variable latente suit une loi gaussienne.
+Une loi gaussienne possède une moyenne et une covariance.
+Une covariance décrit les variations des pixels.
+Une matrice de covariance contient des corrélations.
+Une direction principale décrit une variation des pixels.
+Une direction latente modifie les traits du chiffre.
+Une chaîne de Markov génère une phrase.
+Une phrase contient des mots.
+Une probabilité de transition dépend du dernier mot.
+Une transition observée reçoit une probabilité positive.
+Une estimation utilise les données pour apprendre une distribution.
+Une distribution apprise permet de générer une image.
+Une génération produit de nouvelles observations.
+Une séquence possède un début et une fin.
+Une fin de phrase correspond à un point.
+Une phrase générée peut manquer de cohérence.
